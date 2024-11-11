@@ -21,20 +21,44 @@ void NumberGen();
 void Guess();
 
 double numGuess;
+double theNum;
 
 
 int main()
 {
 
+NumberGen();
+Guess();
+  
 }
 
 void NumberGen(){
+unsigned seed = time(0);
+  srand(seed);
+  theNum = rand() % 100 + 1;
 
-  
+ 
 }
 
 
 void Guess(){
-
   
+  cout << "RANDOM NUMBER GUESSING GAME!" << endl
+    << "---------------------------" << endl
+    << "Please enter your guess: (1-100)" << endl;
+  cin >> numGuess;
+
+ while (numGuess != theNum){
+
+    if (numGuess > theNum)
+      cout << "Too high!" << endl;
+
+    else if (numGuess < theNum)
+      cout << "Too low!" << endl;
+
+   cout << "Try again: \t";
+   cin >> numGuess;
+ }
+
+  cout << "You win! The number was " << theNum << endl;
 }
