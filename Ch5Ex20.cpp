@@ -8,6 +8,9 @@
   If the user’s guess is lower than the random number, the program should display “Too low, try again.”
 
   The program should use a loop that repeats until the user correctly guesses the random number.
+
+  This is Branch2 containing the guess counter.
+  
   */
 
 
