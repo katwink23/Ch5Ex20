@@ -22,6 +22,7 @@ void Guess();
 
 double numGuess;
 double theNum;
+double guessCount = 0;
 
 
 int main()
@@ -47,6 +48,7 @@ void Guess(){
     << "---------------------------" << endl
     << "Please enter your guess: (1-100)" << endl;
   cin >> numGuess;
+  guessCount++;
 
  while (numGuess != theNum){
 
@@ -58,7 +60,9 @@ void Guess(){
 
    cout << "Try again: \t";
    cin >> numGuess;
+   guessCount++;
  }
 
   cout << "You win! The number was " << theNum << endl;
+  cout << "Total Guesses: " << guessCount << endl;
 }
